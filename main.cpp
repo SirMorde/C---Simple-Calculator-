@@ -29,8 +29,7 @@ int main()
   float *answer;
   answer = new(nothrow) float;
   cout << "Welcome to the calculator program!\n";
-  while(true)
-  {
+  while(true){
     cout << "What operation would you like to use? Choose +, -, *, or /" << endl;
     cin >> *operation;
     while(true) {
@@ -80,5 +79,9 @@ int main()
     cout << *firstnum << *operation << *secondnum << " = " << *answer << endl << endl;
     cout << "Let's do it again! ";
   }
+  delete operation;
+  delete firstnum;
+  delete secondnum;
+  delete answer;
   return 0;
 }
